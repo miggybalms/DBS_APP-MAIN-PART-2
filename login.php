@@ -7,7 +7,7 @@ $con = new database();
 if (isset($_POST['login'])) {
   $username = $_POST ['username'];
   $password = $_POST ['password'];
-
+ 
   $user = $con->loginUser($username, $password);
   if ($user) {
     $_SESSION['admin_ID'] = $user['admin_id'];
@@ -34,10 +34,7 @@ if (isset($_POST['login'])) {
         </script> ";
   }
 }
- 
 ?>
-
-
  
 <!DOCTYPE html>
 <html lang="en">
